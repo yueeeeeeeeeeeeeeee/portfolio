@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yue Yin</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Galada&family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <style>
+    .grid-item {
+      width: calc(50% - 20px);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .grid-item img {
+      max-width: 50%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <div class="background">
+    <img src="image/background.jpg" alt="background">
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand d-none d-lg-block" href="home.html">
+        <img src="image/logo1.png" alt="logo1">
+      </a>
+      <a class="navbar-brand d-block d-lg-none" href="home.html">
+        <img src="image/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <img src="image/logo.png" alt="logo">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Social Media Icons -->
+          <div class="row justify-content-center mt-3">
+            <div class="col-auto">
+              <a href="https://www.facebook.com/profile.php?id=61551365325960" target="_blank" class="social-icon"
+                aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="https://twitter.com/yyue110511" target="_blank" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="https://www.instagram.com/yyue110511/" target="_blank" class="social-icon"
+                aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="https://www.youtube.com/channel/UCofffBZ73JP3SYe7UkVaIrQ" target="_blank" class="social-icon"
+                aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <h1>Portfolio</h1>
+  <div class="grid">
+    <div class="grid-item">
+      <img src="image/building.jpg" alt="Photo 1">
+      <p>Buildings with a distinctive architectural style, blending seamlessly into surroundings with a balanced.</p>
+    </div>
+    <div class="grid-item">
+      <img src="image/stairs.jpg" alt="Photo 2">
+      <p>This photo, the girl sits serenely on the staircase, evoking a sense of quiet introspection and solitude.</p>
+    </div>
+    <div class="grid-item">
+      <img src="image/read.jpg" alt="Photo 3">
+      <p>The photograph captures a girl engrossed in the act of opening a book, her curiosity and anticipation palpable
+        against backdrop of simplicity.</p>
+    </div>
+    <div class="grid-item">
+      <img src="image/flower.jpg" alt="Photo 4">
+      <p>Against a backdrop of verdant leaves and earthy branches, a delicate white flower emerges, quietly captivating
+        amidst nature's vibrant canvas.</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <script>
+    function initMasonry() {
+      var grid = document.querySelector('.grid');
+      var msnry = new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      initMasonry();
+    });
+
+    // Recalculate Masonry layout when the page becomes visible
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) {
+        initMasonry();
+      }
+    });
+  </script>
+  <div class="portfolio">
+    <p>Welcome to the world through my lens. I'm Yue, a photographer dedicated to capturing moments of profound beauty
+      and depth. With each click of the shutter, I strive to reveal the essence of my subjects, whether it's the quiet
+      serenity of a solitary figure on a staircase or the vibrant energy of bustling city streets. My work is a
+      celebration of life's intricacies, inviting viewers to pause, reflect, and find new meaning in the ordinary. Join
+      me on this visual journey as we explore the delicate balance between light and shadow, stillness and motion, and
+      the infinite stories waiting to be discovered.</p>
+  </div>
+  <footer class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-3 mb-lg-0 text-center">
+          <p class="mb-0">&copy; 2024, Yue. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+/* Background image container styles */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Placing background behind all content */
+}
+
+/* Background image styles */
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and cover entire div */
+}
+
+/* CSS for positioning logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    /* Adjust distance from top */
+    left: 20px;
+    /* Adjust distance from left */
+}
+
+.navbar {
+    background-color: transparent !important;
+    /* Set the background color of the navbar to transparent */
+    box-shadow: none;
+    /* Optional: Remove the shadow effect of the navbar */
+}
+
+.navbar-nav .nav-link {
+    color: #4C4827 !important;
+    /* Set the color of the nav links */
+}
+
+/* Adjust icon size and color */
+.social-icon {
+    font-size: 20px;
+    color: #000;
+
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-family: "Galada", cursive;
+    font-weight: 500;
+    font-style: normal;
+    color: #4C4827;
+    font-size: 50px;
+}
+
+p {
+    text-align: center;
+    color: #4C4827;
+}
+
+.first-paragraph {
+    margin-top: 30px;
+}
+
+label {
+    margin-left: 30px;
+    color: #4C4827;
+}
+
+.form-control {
+    width: 80%;
+    margin-left: 30px;
+}
+
+.custom-form-container {
+    margin-left: 50px;
+}
+
+.custom-label {
+    color: #4C4827;
+}
+
+
+.btn-primary {
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #4C4827;
+    /* Set text color */
+    background-color: #C9B198;
+    /* Set background color */
+    border-color: #707070;
+    /* Set border color */
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+    color: #A58C71;
+    /* Set text color on hover */
+    background-color: #FFFFFF;
+    /* Set background color on hover */
+    border-color: #707070;
+    /* Set border color on hover */
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 40px 0;
+        /* Adjust top and bottom padding */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 20px;
+        /* Adjust font size */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
+
+
+    .navbar-nav .nav-item {
+        margin-right: 25px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-size: 50px;
+    }
+
+    .first-paragraph {
+        margin-top: 30px;
+    }
+
+    .form-control {
+        width: 80%;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .form-group label {
+        margin-top: 20px;
+    }
+
+    #message {
+        width: 90%;
+    }
+
+    footer p {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1.5s ease-in-out;
+    opacity: 0;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
